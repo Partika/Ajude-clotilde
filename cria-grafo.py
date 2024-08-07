@@ -37,3 +37,5 @@ def monta_estrutura():
   
 def main():
   monta_estrutura()
+  
+main()
