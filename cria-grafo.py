@@ -16,23 +16,19 @@ def operacoes(num:int):
     conexoes.append(num+1)
   if(num>min):
     conexoes.append(num-1)
-  if(num<limX2):
-    conexoes.append(num*2)
-  if(num<limX3):
-    conexoes.append(num*3)
-  if(paridade(num) and num>=2):
-    conexoes.append(int(num/2))
+  if(num != 0):
+    if(num<limX2):
+      conexoes.append(num*2)
+    if(num<limX3):
+      conexoes.append(num*3)
+    if(paridade(num)):
+      conexoes.append(int(num/2))
   return conexoes
 
 def monta_estrutura():
   matriz = []
-  percorridos = []
   for i in range (100001):
     matriz.append(operacoes(i))
-    percorridos.append(False)
-  print(percorridos)
-  print()
-  print()
   print(matriz)
   
 def main():
