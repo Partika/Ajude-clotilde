@@ -15,6 +15,13 @@ def leitura_proibidos(K:int):
     print("?")
   return proibidos
 
+def criaVisitados():
+  visitados = {no: (False, float('inf')) for no in range(100001)}
+  return visitados
+  
+def dfs(O, D):
+  return
+
 def main():
   while(True):
     O, D, K = leitura_ODK()
