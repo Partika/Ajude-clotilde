@@ -23,6 +23,7 @@ def operacoes(num:int):
       conexoes.append(num*3)
     if(paridade(num)):
       conexoes.append(int(num/2))
+  conexoes = list(set(conexoes))
   return conexoes
 
 def monta_estrutura():
