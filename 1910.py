@@ -27,7 +27,25 @@ def impede_proibidos(visitados:dict, proibidos:list):
   return visitados
 
 def bfs(O:int, D:int, visitados:dict):
-  return
+  visitados[O] = (True, 0)
+  
+  fila = [O]
+  
+  while fila:
+    no_atual = fila.pop()
+    visitado, distancia = visitados[no_atual]
+    
+    for canal in grafo[no_atual]:
+      if(canal == D):
+        visitados[canal] = (True, distancia + 1)
+        return visitados[D]
+      
+      foi_visitado, _ = visitados[canal]
+      if(not foi_visitado):
+        visitados[canal] = (True, distancia + 1)
+        fila.append[canal]
+        
+  return (False, -1)
 
 def main():
   while(True):
@@ -36,11 +54,9 @@ def main():
       break
     proibidos = leitura_proibidos(K)
     visitados = criaVisitados()
-    visitados = impede_proibidos()
-    
-    
-    
-  print("-1")
+    visitados = impede_proibidos(proibidos)
+    _, resultado = bfs(O, D, visitados)
+    print(resultado)
 
 grafo = []
 
