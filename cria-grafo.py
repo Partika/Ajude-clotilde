@@ -26,10 +26,12 @@ def operacoes(num:int):
   return conexoes
 
 def monta_estrutura():
-  matriz = []
+  lista_adjacencias = {}
   for i in range (100001):
-    matriz.append(operacoes(i))
-  print(matriz)
+    lista_adjacencias.update({
+      i: operacoes(i)
+    })
+  print(lista_adjacencias)
   
 def main():
   monta_estrutura()
