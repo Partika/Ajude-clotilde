@@ -18,8 +18,15 @@ def leitura_proibidos(K:int):
 def criaVisitados():
   visitados = {no: (False, float('inf')) for no in range(100001)}
   return visitados
+
+def impede_proibidos(visitados:dict, proibidos:list):
+  infinite = float('inf')
+  for no in proibidos:
+    visitados[no] = (True, infinite)
   
-def dfs(O, D):
+  return visitados
+
+def bfs(O:int, D:int, visitados:dict):
   return
 
 def main():
@@ -28,6 +35,9 @@ def main():
     if(O == 0, O == D, O == K):
       break
     proibidos = leitura_proibidos(K)
+    visitados = criaVisitados()
+    visitados = impede_proibidos()
+    
     
     
   print("-1")
