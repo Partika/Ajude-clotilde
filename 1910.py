@@ -18,9 +18,10 @@ def leitura_proibidos(K:int):
 def main():
   while(True):
     O, D, K = leitura_ODK()
-    proibidos = leitura_proibidos(K)
     if(O == 0, O == D, O == K):
       break
+    proibidos = leitura_proibidos(K)
+    
     
   print("-1")
 
